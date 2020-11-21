@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Arithmetic Operation</title>
+<style>
+div{
+margin-left:500px;
+}
+p{
+	//background-color:dodgerblue;
+	text-align:center;
+	font-size:20px;
+}
+input{
+	text-align:center;
+	height:30px;
+	}
+
+</style>
+</head>
+<body>
+<div>
+<br>
+<input type="text" name="f" id="el1" placeholder="enter first value">           
+<input  type="text" name="s" id="el2" placeholder="enter second value">
+<br><br>
+<select id="op">
+<option> + </option>
+<option> - </option>
+<option> * </option>
+<option> / </option>
+</select>
+<button type="button"  onclick="add()" >submit</button>
+<br>
+
+</div>
+<p id="demo"></p>
+<script>
+var a=0;
+var b=0;
+var c,n;
+
+function add(){
+	a=parseInt(document.getElementById("el1").value);
+	b=parseInt(document.getElementById("el2").value);
+	c=document.getElementById("op").value;
+	if(c=='+'){
+			n=0;}
+	if(c=='-'){
+			n=1;}
+	if(c=='*'){
+			n=2;}
+	if(c=='/'){
+			n=3;}
+	switch(n){
+	case 0:document.getElementById("demo").innerHTML =a+b;
+		break;
+	
+	case 1:document.getElementById("demo").innerHTML =a-b;
+		break;
+	
+	case 2:document.getElementById("demo").innerHTML =a*b;
+		break;
+
+	case 3:document.getElementById("demo").innerHTML =a/b;
+		break;
+	}
+
+	
+}
+
+</script>
+</body>
+</html>
